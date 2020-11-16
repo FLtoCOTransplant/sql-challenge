@@ -3,17 +3,22 @@ CREATE TABLE departments (
 	dept_name VARCHAR
 );
 
+COPY departments (dept_no, dept_name)
+FROM 'C:\Users\richa\sql-challenge\data\departments.csv'
+DELIMITER ',' 
+CSV HEADER;
+
 SELECT * FROM departments
 
 CREATE TABLE dept_emp (
-	emp_no INT PRIMARY KEY,
-	dept_no INT
+	emp_no INT,
+	dept_no VARCHAR
 );
 
 SELECT * FROM dept_emp
 
 CREATE TABLE dept_manager (
-	dept_no INT,
+	dept_no VARCHAR,
 	emp_no INT PRIMARY KEY
 );
 
@@ -44,3 +49,4 @@ CREATE TABLE titles (
 );
 
 SELECT * FROM titles
+
