@@ -32,14 +32,14 @@ SELECT employees.emp_no,
 FROM employees INNER JOIN dept_manager 
 ON employees.emp_no=dept_manager.emp_no
 INNER JOIN departments 
-ON dept_manager.dept_no = departments.dept_no;
+ON dept_manager.dept_no=departments.dept_no;
 
 -- 5. Hercules, like Dr. Doolitle?  Who is named Hercules and has a 
 --    last name that begins with "B"?
 SELECT employees.first_name, 
 	   employees.last_name, 
 	   employees.sex
-FROM employees WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
+FROM employees WHERE first_name='Hercules' AND last_name LIKE 'B%';
 
 
 -- 6. Sales, where the money is made!  Who works there?
@@ -50,4 +50,15 @@ SELECT employees.emp_no,
 FROM employees INNER JOIN dept_emp
 ON dept_emp.emp_no=employees.emp_no
 INNER JOIN departments
-ON departments.dept_no=dept_emp.dept_no WHERE dept_name = 'Sales';
+ON departments.dept_no=dept_emp.dept_no WHERE dept_name='Sales';
+
+-- 7. Let's see who works in the sales and development dept...
+SELECT employees.emp_no, 
+	   employees.last_name, 
+	   employees.first_name, 
+	   departments.dept_name
+FROM employees INNER JOIN dept_emp
+ON dept_emp.emp_no=employees.emp_no
+INNER JOIN departments
+ON departments.dept_no=dept_emp.dept_no 
+WHERE dept_name='Sales' OR dept_name='Development';
