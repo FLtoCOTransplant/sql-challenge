@@ -27,11 +27,11 @@ SELECT * FROM dept_manager
 CREATE TABLE employees (
 	emp_no INT PRIMARY KEY,
 	emp_title VARCHAR(5),
-	birth_date VARCHAR(10),
+	birth_date date,
 	first_name VARCHAR,
 	last_name VARCHAR,
 	sex VARCHAR(1),
-	hire_date VARCHAR(10)
+	hire_date date
 );
 
 SELECT * FROM employees
