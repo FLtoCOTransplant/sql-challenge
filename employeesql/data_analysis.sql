@@ -62,3 +62,9 @@ ON dept_emp.emp_no=employees.emp_no
 INNER JOIN departments
 ON departments.dept_no=dept_emp.dept_no 
 WHERE dept_name='Sales' OR dept_name='Development';
+
+-- 8. How many share the same last name in descending order?
+SELECT last_name, COUNT(last_name) 
+FROM employees
+GROUP BY last_name
+ORDER BY count(last_name) desc;
