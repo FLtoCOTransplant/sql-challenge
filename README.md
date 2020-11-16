@@ -11,14 +11,16 @@ visually link different data sources.
 
 ![](images/QuickDBD-Employees.png)
 
-In pgAdmin 4 I created 6 different tables following the format developed within the data modeling step.
-This turned out to be a good test of the model as some tables that I thought would have a certain columnd
+In pgAdmin 4, I created 6 different tables following the format developed within the data modeling step.
+This turned out to be a good test of the model as some tables that I thought would have a certain column
 as a primary key did not and I recieved an error when I imported the data.  With this information I then 
 went back to the data source, reviewed it and adjusted the model and the table properties.
 
 Once all the data was loaded into the database then we could slice and dice it.  Who was hired in 1986?
 Who is the manager of sales?  Who is named Hercules and their last name begins with a "B".  I personally
-don't know anyone but I do know someone who is named Hercules and their last nambe begins with a "D"!
+don't know anyone but I do know someone who is named Hercules and their last name begins with a "D"!
 
 
 ![](images/hercules.jpg)
+
+This process makes a lot of sense to me and I look forward to applying it at work!
